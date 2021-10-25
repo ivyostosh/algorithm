@@ -5,6 +5,7 @@ Important methods to remember:
 len(list), 
 list.append(), list.insert(index, value),
 list.pop(), list.pop(index), del list[index:index], list.remove(value)
+
 """
 
 ########################################################################
@@ -91,11 +92,25 @@ for x in fruits:
     print(x)
 
 ########################################################################
-# Common arrays interview questions in Python
+
 """
+Common arrays interview questions in Python
+
 Remove even integers from list
 Merge two sorted lists
 Find minimum value in a list
 Maximum sum sublist
 Print products of all elements
+"""
+
+
+"""
+How are lists implemented in CPython? (https://docs.python.org/3/faq/design.html#how-are-lists-implemented-in-cpython)
+
+CPython’s lists are really variable-length arrays, not Lisp-style linked lists. 
+The implementation uses a contiguous array of references to other objects, and keeps a pointer to this array and the array’s length in a list head structure.
+This makes indexing a list a[i] an operation whose cost is independent of the size of the list or the value of the index.
+When items are appended or inserted, the array of references is resized. 
+Some cleverness is applied to improve the performance of appending items repeatedly; 
+when the array must be grown, some extra space is allocated so the next few times don’t require an actual resize.
 """

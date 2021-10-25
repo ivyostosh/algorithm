@@ -34,28 +34,21 @@ def inorder_traversal(root):
     if not root:
         return []
 
-    # Create a dummy node with right child points to root
-    
-    dummy = TreeNode(0)
-    dummy.right = root
-
     # Initialize variables
-    stack = [dummy]
+    stack = []
     inorder = []
+    node = root
 
     # Perform traversal
-    while stack:
-        node = stack.pop()
-        # Append right, root, and all left children to the stack
-        if node.right:
-            node = node.right
-            
-            while node:
-                stack.append(node)
-                node = node.left
+    while node or stack:
         
-        # When poping from stack, the deepest left child will be poped first, then root, then right
-        if stack:
-            inorder.append(stack[-1])
+        while node:
+            stack.append(node)
+            node = node.left
+        
+        node = stack.pop()
+        inorder.append(node.val)
+
+        node = node.right
         
     return inorder

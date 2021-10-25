@@ -46,6 +46,9 @@ print(dict1.values())
 print("\nDictionary with all key, value pairs: ")
 print(dict1.items())
 
+# https://stackoverflow.com/questions/11041405/why-dict-getkey-instead-of-dictkey
+# .get(key, 'default value')
+
 ########################################################################
 print("\n===============Add to a dictionary===============")
 
@@ -98,3 +101,21 @@ print("\nDictionary after deletion: " + str(dict3))
 print("The arbitrary pair returned is: " + str(pop_ele))
 
 
+"""
+How are dictionaries implemented in CPython? (https://docs.python.org/3/faq/design.html#how-are-dictionaries-implemented-in-cpython)
+
+CPython’s dictionaries are implemented as resizable hash tables. 
+Compared to B-trees, this gives better performance for lookup (the most common operation by far) under most circumstances, and the implementation is simpler.
+
+Dictionaries work by computing a hash code for each key stored in the dictionary using the hash() built-in function. 
+The hash code varies widely depending on the key and a per-process seed; for example, “Python” could hash to -539294296
+while “python”, a string that differs by a single bit, could hash to 1142331976. 
+The hash code is then used to calculate a location in an internal array where the value will be stored. 
+Assuming that you’re storing keys that all have different hash values, this means that dictionaries take constant time – O(1), in Big-O notation – to retrieve a key.
+
+"""
+
+"""
+Hash Table v.s. BST
+https://www.geeksforgeeks.org/advantages-of-bst-over-hash-table/
+"""

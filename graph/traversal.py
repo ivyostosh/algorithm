@@ -1,5 +1,8 @@
 """
 https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+
+All methods are implemented recursively in this file.
+
 Depth First Traversals: 
 (a) Inorder (Left, Root, Right) : 4 2 5 1 3 
 (b) Preorder (Root, Left, Right) : 1 2 4 5 3 
