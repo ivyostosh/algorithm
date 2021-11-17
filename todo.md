@@ -8,12 +8,7 @@ https://www.jiuzhang.com/solutions/convert-binary-tree-to-linked-lists-by-depth/
 https://leetcode.com/discuss/interview-question/350800/Google-or-Onsite-or-Chocolate-Sweetnesss
 
 
-https://ideas.corp.google.com/InterviewQuestions/view?idea=291&sort=approval
-
-
 https://leetcode.com/problems/minimum-window-substring/
-
-
 
 
 Revisit

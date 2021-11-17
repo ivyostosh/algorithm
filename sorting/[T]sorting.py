@@ -35,11 +35,11 @@ class Solution:
             while left <= right and A[right] > pivot:
                 right -= 1
             
-            if left <= right:
+            if left <= right:   # Indicate left greater than the right
                 A[left], A[right] = A[right], A[left]
 
                 left += 1
-                right += 1
+                right -= 1
             
         self.quickSort(A, start, right)
         self.quickSort(A, left, end)

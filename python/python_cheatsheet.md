@@ -35,6 +35,12 @@ except ValueError:
 # String
 ' '.join()
 
+Split string to substrings by delimiter
+list.split("delimiter")
+
+Split string to character
+list(str)
+
 
 # int with different bases
 https://stackoverflow.com/questions/23190060/what-does-base-value-do-in-int-function
@@ -53,3 +59,78 @@ int("333", 4)   # == 3*(4**2) + 3*(4**1) + 3*(4**0)
                 # == 3*16 + 3*4 + 3*1
                 # == 48 + 12 + 3
                 # == 63
+
+
+# divmid
+The divmod() method in python takes two numbers and returns a pair of numbers consisting of their quotient and remainder. 
+Input : x = 9, y = 3
+Output :(3, 0)
+
+Input : x = 8, y = 3
+Output :(2, 2)
+
+# find
+If find() doesn't find a match, it returns -1, otherwise it returns the left-most index of the substring in the larger string.
+fullstring = "StackAbuse"
+substring = "tack"
+
+if fullstring.find(substring) != -1:
+    print("Found!")
+else:
+    print("Not found!")
+
+# isalnum()
+The isalnum() method returns True if all characters in the string are alphanumeric (either alphabets or numbers). If not, it returns False.
+
+
+# reverse v.s. reversed v.s. slicing
+
+foo.reverse() actually reverses the elements in the container.
+reversed() doesn't actually reverse anything, it merely returns an object that can be used to iterate over the container's elements in reverse order. -> As the return value is an object, in order to directly use it, you need to do list(xx) to convert it to a list.
+
+
+# enumerate()
+enumerate() method adds a counter to an iterable and returns it in a form of enumerating object. This enumerated object can then be used directly for loops or converted into a list of tuples using the list() method.
+
+enumerate(iterable, start=0)
+
+Parameters:
+Iterable: any object that supports iteration
+Start: the index value from which the counter is 
+              to be started, by default it is 0
+
+# count()
+list.count(target)
+str.count(target, start, end)
+
+# zip()
+for w, v in zip(words1, words2)
+good use case when we are iterating two same length lists with the SAME indexes. 
+
+
+# Pass by reference
+https://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference
+https://docs.python.org/3/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference
+
+
+# check type
+
+type(object)
+
+To check if o is an instance of str or any subclass of str, use isinstance (this would be the "canonical" way):
+
+if isinstance(o, str):
+To check if the type of o is exactly str (exclude subclasses):
+
+if type(o) is str:
+The following also works, and can be useful in some cases:
+
+if issubclass(type(o), str):
+
+
+# Create 2D array
+list = [[False for _ in range(len(matrix[0])] for _ in range(len(matrix))]
+
+
+# zip(*)
+https://stackoverflow.com/questions/29139350/difference-between-ziplist-and-ziplist/29139418

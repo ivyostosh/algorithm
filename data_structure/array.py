@@ -59,7 +59,7 @@ print(fruits)
 print("\nPop returns the deleted value, while del doesn't")
 print(fruits_pop)
 
-# delete with value: using remove
+# delete with value: using remove (only remove the first occurence)
 print("\nRemove a value using remove:")
 fruits.remove('mango')
 print(fruits)

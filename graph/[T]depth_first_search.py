@@ -43,12 +43,17 @@ def inorder_traversal(root):
     while node or stack:
         
         while node:
+            # Push all left childen to stack
             stack.append(node)
             node = node.left
         
+        # Append to inorder from the most left, then root
         node = stack.pop()
         inorder.append(node.val)
 
+        # Then right
         node = node.right
         
     return inorder
+
+#https://www.lintcode.com/problem/153/solution/16812
